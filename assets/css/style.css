@@ -56,6 +56,17 @@ a {
   margin-right: auto;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line2 {
+  --line-clamp: 2;
+}
+
 /* ------- header ------  */
 
 .header {
@@ -327,6 +338,7 @@ a {
   margin-top: 55px;
 }
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
@@ -395,4 +407,123 @@ a {
 
 .popular .course-item .btn-book:hover {
   background: var(--primary-color);
+}
+
+/* ---------- feeedback ------------------ */
+.feedback {
+  padding: 96px 0;
+  margin-top: 135px;
+  background: #2e2100;
+}
+
+.feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  line-height: 1.42;
+}
+
+.feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.feedback-item .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px;
+}
+
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
+}
+
+.feedback-item .dot.active {
+  background-color: var(--primary-color);
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+/* ------------------- feature -------------- */
+.features {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+
+.features .images img {
+  width: 270px;
+  height: 405px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.features .lower {
+  margin-top: 34px;
+}
+
+.features .content {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .desc {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #5f5b53;
+}
+
+.features .cta-btn {
+  width: 137px;
+  height: 50px;
+  background: var(--primary-color);
+  margin-top: 32px;
 }
